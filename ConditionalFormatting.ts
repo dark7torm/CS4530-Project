@@ -1,3 +1,4 @@
+import { Condition } from "./Condition";
 // ConditionalFormatting.ts
 
 export class ConditionalFormatting {
@@ -22,9 +23,4 @@ export class ConditionalFormatting {
     }
 }
 
-// Enum-like object for Condition
-export enum Condition {
-    GREATER_THAN = ">",
-    LESS_THAN = "<",
-    EQUAL = "="
-}
+

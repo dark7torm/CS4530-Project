@@ -2,6 +2,7 @@
 import { Cell } from './Cell';
 import { CellTextEditor } from './CellTextEditor';
 import { BarGraph } from './BarGraph';
+import { PlaintextCell } from './PlaintextCell';
 
 export class Spreadsheet {
     private table: Cell[][];
@@ -19,10 +20,11 @@ export class Spreadsheet {
     }
 
     insertRow(): void {
-        // Implementation for inserting a row
+        this.table.push(this.createBlankLine());
     }
 
     insertColumn(): void {
+        
         // Implementation for inserting a column
     }
 
@@ -36,5 +38,14 @@ export class Spreadsheet {
 
     clearContent(): void {
         // Implementation for clearing content
+    }
+
+    createBlankLine(): Cell[] {
+        const blankLine: Cell[] = [];
+        for (let i = 0; i < this.table.length; i++) {
+            blankLine.push(new PlaintextCell(""));
+        }
+        return blankLine
+
     }
 }
